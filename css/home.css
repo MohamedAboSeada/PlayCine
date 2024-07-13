@@ -1,0 +1,162 @@
+body {
+    background-color: #000;
+}
+.splide {
+    padding: 50px 15px;
+}
+
+.splide__slide {
+    width: 180px;
+    height: 255px;
+    background-color: #333;
+    margin-right: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.splide__arrows {
+    position: absolute;
+    width: 20%;
+    top: 70px;
+    right: -150px;
+    z-index: 999;
+    transform: translate(-50%, -55%);
+    -webkit-transform: translate(-50%, -55%);
+    -moz-transform: translate(-50%, -55%);
+    -ms-transform: translate(-50%, -55%);
+    -o-transform: translate(-50%, -55%);
+}
+
+.splide__arrow {
+    background-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.splide__slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* start top rated */
+.topRated {
+    padding: 60px 0;
+}
+
+.topRated .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.topRated__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.topRated__card {
+    color: #fff;
+    background-color: #333;
+    height: 270px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    z-index: 1;
+}
+
+.topRated__card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.8), transparent);
+    bottom: -5px;
+    left: 0;
+    z-index: -1;
+}
+
+.topRated__card-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.toprated__name {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .topRated__cards {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 40px;
+    }
+}
+
+/* end top rated */
+.latesttrailers {
+    padding: 60px 0;
+}
+
+.trillerCards {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: auto;
+}
+
+.trillerCard {
+    width: 100%;
+    background-color: #333;
+    height: 250px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.trillerCard .details {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .trillerCards {
+        flex-direction: column;
+    }
+}
+
+/* end triller watch */

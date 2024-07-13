@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayCine - loading...</title>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <!-- website icon -->
+    <link rel="shortcut icon" href="images/Image 13.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- splide slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- global rules -->
+    <link rel="stylesheet" href="css/_global.css">
+    <!-- details stylesheet -->
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/season.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav__extended">
+                    <a href="home.html" class="nav__logo-group">
+                        <img class="nav__logo" src="images/Image 13.png">
+                        <p class="nav__webiste-name">playcine</p>
+                    </a>
+                </div>
+                <div class="nav__buttons">
+                    <button class="nav__button-search"><i class="bx bx-search"></i></button>
+                    <div class="searchBox hide">
+                        <input type="text" class="searchBox__input" placeholder="search...">
+                        <div class="searchBox__results hide">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="movie">
+            <div class="loading">
+                <i class="bx bx-loader-alt bx-spin"></i>
+            </div>
+            <div class="container">
+                <a class="return__to__series" href="javascript:history.back()">return</a>
+                <h1 class="movie__name teko__font">Galactic Convergence</h1>
+                <div class="movie__genres">
+
+                </div>
+                <p class="movie__overview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui pariatur labore
+                    eius recusandae eligendi suscipit non nulla et laborum necessitatibus?</p>
+            </div>
+        </div>
+    </header>
+    <!-- header  -->
+    <!-- episods -->
+    <div class="block block__episods">
+        <div class="container">
+            <h2 class="block__heading">Episods</h2>
+            <div class="block__cards">
+
+            </div>
+        </div>
+    </div>
+    <!-- /seasons -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="credit">Made by <a href="about.html">Mohamed Abo Seada</a></p>
+            <div class="social">
+                <a href="https://github.com/MohamedAboSeada/" class="social__link"><i class="bx bxl-github"></i></a>
+                <a href="www.linkedin.com/in/mohamed-abo-seada-0b8171166" class="social__link"><i
+                        class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+    <div class="trillerWatch trillerWatch_hide">
+        <div class="container">
+            <div class="trillerWatch__header">
+                <h2>Watch Trailer</h2>
+                <button class="trillerWatch__closeWatch">&times;</button>
+            </div>
+            <iframe class="trillerWatch__youtubeEmbed" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="js/season.js" type="module"></script>
+    <script type="module" src="js/search.js"></script>
+</body>
+
+</html>
