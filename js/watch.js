@@ -15,7 +15,7 @@ if (urlQueries.type === 'movie') {
 	frame_name.textContent = `${urlQueries.name}`;
 } else if (urlQueries.type === 'tv') {
 	frame.src = `https://multiembed.mov/directstream.php?video_id=${urlQueries.id}&tmdb=1&s=${urlQueries.s}&e=${urlQueries.e}`;
-	frame_name.textContent = `${urlQueries.name}s${urlQueries.s}ep${urlQueries.e}`;
+	frame_name.textContent = `${urlQueries.name} (S${urlQueries.s} - EP${urlQueries.e})`;
 }
 
 window.addEventListener('resize', (_) => {
