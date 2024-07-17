@@ -160,32 +160,33 @@ function fillSeasons(seasons, serie_id, show_name) {
 	seasons_cards.innerHTML = ``;
 
 	seasons.forEach((season) => {
-		console.log(season);
-		let block__card = document.createElement('div');
-		block__card.classList.add('block__card');
-		let block__loader = document.createElement('div');
-		block__loader.classList.add('loader');
-		block__loader.innerHTML = `<i class="bx bx-loader-alt bx-spin"></i>`;
+		if (season.air_date !== null) {
+			let block__card = document.createElement('div');
+			block__card.classList.add('block__card');
+			let block__loader = document.createElement('div');
+			block__loader.classList.add('loader');
+			block__loader.innerHTML = `<i class="bx bx-loader-alt bx-spin"></i>`;
 
-		let block__details = document.createElement('a');
-		block__details.innerHTML = `<i class="bx bx-play"></i>`;
-		block__details.classList.add('details');
-		block__details.href = `season.html`;
-		block__details.addEventListener('click', (_) => {
-			localStorage.setItem(
-				'season',
-				JSON.stringify({
-					tv_id: serie_id,
-					tv_show: show_name,
-					season_id: season.season_number,
-				})
-			);
-		});
+			let block__details = document.createElement('a');
+			block__details.innerHTML = `<i class="bx bx-play"></i>`;
+			block__details.classList.add('details');
+			block__details.href = `season.html`;
+			block__details.addEventListener('click', (_) => {
+				localStorage.setItem(
+					'season',
+					JSON.stringify({
+						tv_id: serie_id,
+						tv_show: show_name,
+						season_id: season.season_number,
+					})
+				);
+			});
 
-		block__card.append(block__loader, block__details);
+			block__card.append(block__loader, block__details);
 
-		const image_url = `${image_base_url}${sizes.poster_sizes[1]}${season.poster_path}`;
-		seasons_cards.append(block__card);
-		hideLoader(image_url, block__loader, block__card);
+			const image_url = `${image_base_url}${sizes.poster_sizes[1]}${season.poster_path}`;
+			seasons_cards.append(block__card);
+			hideLoader(image_url, block__loader, block__card);
+		}
 	});
 }

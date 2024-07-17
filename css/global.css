@@ -16,12 +16,12 @@
 }
 
 .teko__font {
-    font-family: "Teko", "IBM Plex Sans Arabic", sans-serif;
+    font-family: "Teko", sans-serif;
 }
 
 /* setup global styles */
 body {
-    font-family: "Maven Pro", sans-serif;
+    font-family: "Maven Pro", "IBM Plex Sans Arabic", sans-serif;
     line-height: 1.5;
 }
 

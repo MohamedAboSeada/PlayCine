@@ -50,22 +50,26 @@ function displayResults(data) {
 	if (filteredSearch.length > 0) {
 		searchResults.classList.remove('hide');
 		filteredSearch.forEach((result) => {
-			console.log(result);
-			let resultLink = document.createElement('a');
-			resultLink.classList.add('searchBox__result');
-			resultLink.href = `details.html`;
-			resultLink.addEventListener('click', (_) => {
-				localStorage.setItem(
-					'details',
-					JSON.stringify({ id: result.id, type: result.media_type })
-				);
-			});
-			let image_url = `${image_base_url}${sizes.poster_sizes[1]}${result.poster_path}`;
-			let show_title = result.name ? result.name : result.title;
-			let resultStrcuture = `<img class="show__image" async src="${image_url}">
+			if (result.poster_path !== null) {
+				let resultLink = document.createElement('a');
+				resultLink.classList.add('searchBox__result');
+				resultLink.href = `details.html`;
+				resultLink.addEventListener('click', (_) => {
+					localStorage.setItem(
+						'details',
+						JSON.stringify({
+							id: result.id,
+							type: result.media_type,
+						})
+					);
+				});
+				let image_url = `${image_base_url}${sizes.poster_sizes[1]}${result.poster_path}`;
+				let show_title = result.name ? result.name : result.title;
+				let resultStrcuture = `<img class="show__image" async src="${image_url}">
                                 <p class="show__name">${show_title}</p>`;
-			resultLink.innerHTML = resultStrcuture;
-			searchResults.append(resultLink);
+				resultLink.innerHTML = resultStrcuture;
+				searchResults.append(resultLink);
+			}
 		});
 	} else {
 		searchResults.classList.add('hide');

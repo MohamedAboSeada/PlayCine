@@ -122,4 +122,7 @@ body {
     .movie__overview {
         margin: 0 auto;
     }
+    .movie__button-trailer{
+        margin-top: 20px;
+    }
 }

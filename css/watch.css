@@ -31,6 +31,55 @@ body {
     -o-border-radius: 10px;
 }
 
+/* episods */
+.episods {
+    padding: 60px 0;
+}
+
+.episods_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.episods_card {
+    color: #fff;
+    height: 50px;
+    font-size: 1.2rem;
+    background-color: #333;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -ms-transition: 300ms ease;
+    -o-transition: 300ms ease;
+}
+.active{
+    background-color: var(--danger-color);
+}
+.episods_card:hover{
+    background-color: #111;
+}
+
+/* /episods */
+.message{
+    background-color: var(--info-color);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 footer {
     position: relative;
     z-index: 1;
