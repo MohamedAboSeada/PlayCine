@@ -71,3 +71,9 @@ const message = document.querySelector('.message');
 setTimeout(_=>{
 	message.classList.add('hide');
 },5000);
+
+// some style
+let watchArea = document.querySelector('.MasterWatchArea');
+if(urlQueries.type === 'movie'){
+	watchArea.style.setProperty('padding-bottom','50px');
+}
