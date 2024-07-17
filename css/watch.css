@@ -17,7 +17,6 @@ body {
 .MasterWatchArea {
     display: flex;
     height: calc(100% - 100px);
-    padding-bottom: 56.25%; /* 16:9 ratio */
 }
 
 .watchArea__movie-stream {
