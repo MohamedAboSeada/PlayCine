@@ -122,7 +122,8 @@ body {
     .movie__overview {
         margin: 0 auto;
     }
-    .movie__button-trailer{
+    
+    .movie__buttons{
         margin-top: 20px;
     }
 }
